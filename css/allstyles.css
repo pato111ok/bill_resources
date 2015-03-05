@@ -1,0 +1,14 @@
+/* 
+    Document   : allstyles
+    Created on : 03-sep-2013, 10:32:16
+    Author     : COR
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@import 'bootstrap.min.css';
+@import 'bootstrap-editable.css';
+@import 'jumbotron.css';
+@import 'style.css';
+@import 'datepicker.css';
+@import 'flot.css'; /*para generacion de graficas*/

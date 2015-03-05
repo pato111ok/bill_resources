@@ -1,0 +1,285 @@
+/* 
+    Document   : style
+    Created on : 27-ago-2013, 11:14:47
+    Author     : COR
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.modulelayout{
+    background: #fff;
+/*    border: 1px solid #CCCCCC;*/
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+    text-align: center; 
+    height: 250px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.modulelayoutsmall{
+    width: 100px;
+    float: left;
+    height: 110px;
+    border: solid 1px #ccc;
+    padding: 5px;
+    cursor: pointer;
+/*    margin-left: 15px;*/
+    margin-top: 15px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+.modulelayout:hover, .userprofile:hover{
+    background: #EEEEEE;
+}
+
+.userprofile{
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    clear: right;
+    cursor: pointer;
+    float: right;
+/*    height: 60px;*/
+    padding: 5px;
+    margin: 15px;
+/*    width: 400px;*/
+    background: #fff;
+}
+
+.btnlogout:hover{
+    color: #ff0000;
+}
+
+td.numericcell{
+    text-align: right;
+}
+
+.labelblock{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.number, input.number, input.integer, input.positive, input.positive-integer {
+    text-align: right;
+}
+
+.btnquitar {
+    background: url(../img/icons/removesmall.png) no-repeat;
+    position:absolute; 
+    /*left:20px; top:0; */
+    width:25px; 
+    height:25px;
+    /*padding: 3px;    */
+    cursor: pointer;
+}
+
+.clr{
+    clear: both;
+}
+
+
+/*#frame { width: 100%; height: 160px; padding: 0; background: #ff0000}
+#frame .slidee { margin: 0; padding: 0; height: 100%; list-style: none; }
+#frame .slidee li { float: left; margin: 0 5px 0 0; padding: 0; width: 120px; height: 100%; }*/
+
+#frame {
+    height: 150px;
+    width: 150px;
+    margin: 0px 0px;
+    padding: 10px 0px; /*(ver,hor)*/
+    overflow: hidden;
+    width: 100%;
+}
+.slidee {
+	list-style: none;
+	margin: 0px 10px;
+        padding: 0px 0px;
+	height: 100%;
+	font-size: 30px;
+}
+.slidee li {
+	float: left;
+	height: 100%;
+	margin: 0 5px 0 0;
+	background: #fff;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px 5px 5px 5px;
+	color: #333;
+	text-align: center;
+	cursor: pointer;
+        width: 200px;
+}
+.slidee li:hover {
+	float: left;
+	height: 100%;
+	margin: 0 5px 0 0;
+	background: #2779aa;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px 5px 5px 5px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+        width: 200px;
+}
+.slidee li.active {
+/*	border: solid red;*/
+	background: #205983;
+        color: #fff;
+}
+p {
+  font-size: 16px;
+  font-weight: bold;
+/*  color: #000;*/
+}
+.scrollbar {
+	margin: 0 0 1em 0;
+	height: 2px;
+	background: #ccc;
+	line-height: 0;
+}
+.scrollbar .handle {
+	width: 100px;
+	height: 100%;
+	background: #292a33;
+	cursor: pointer;
+}
+.scrollbar .handle .mousearea {
+	position: absolute;
+	top: -9px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+}
+
+.col-sm-full{
+    width: 100%;
+    float:left;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: right;
+}
+
+.bodybg{
+  /*  background-image: url(img/electronicinvoice2.jpg);*/
+    /*padding-top: 70px;*/
+    background-size: 100%; /* size the background image at 100% like any responsive img tag */
+    background-position: top center;
+/*    background-repeat:no-repeat;    */
+}
+.menubg{
+    background-image: url(img/electronicinvoices.jpg)
+}
+.containerbg{
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/*.portfolio-item {
+	margin-bottom: 25px;
+}*/
+
+.font14{
+    font-size: 14px;
+}
+.font16{
+    font-size: 16px;
+}
+.font18{
+    font-size: 18px;
+}
+.font20{
+    font-size: 20px;
+}
+.font22{
+    font-size: 22px;
+}
+.font24{
+    font-size: 24px;
+}
+.font26{
+    font-size: 26px;
+}
+.font28{
+    font-size: 28px;
+}
+.font30{
+    font-size: 30px;
+}
+.font32{
+    font-size: 32px;
+}
+.font34{
+    font-size: 34px;
+}
+.font36{
+    font-size: 36px;
+}
+.font38{
+    font-size: 38px;
+}
+.font48{
+    font-size: 48px;
+}
+.font58{
+    font-size: 58px;
+}
+iframe{
+    display: none;
+}
+
+.form-control2{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;*/
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    float:left;
+    /*width: 100%;*/    
+}
+
+.form-control3{
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;*/
+    color: #555;
+    /*display: block;*/
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    /*float:left;*/
+    /*width: 100%;*/    
+}
+.table-responsive {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    background-image: linear-gradient(to bottom, #5CB85C 0px, #419641 100%)
+}
+a{
+    color: #419641;
+}
+
+body{
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
