@@ -26,8 +26,10 @@
 .btn-info.active,
 .btn-warning.active,
 .btn-danger.active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+/*  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, f, .925);
+          box-shadow: inset 0 3px 5px rgba(0, 0, f, .925); */
+  -webkit-box-shadow: 3px 55px #333 inset;
+          box-shadow: 3px 55px #333 inset;
 }
 .btn:active,
 .btn.active {
