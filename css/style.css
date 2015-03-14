@@ -283,3 +283,9 @@ a{
 body{
     font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
 }
+    
+    .navbar-top-links li a:hover, .navbar-top-links li a:focus,
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+        background-color: #3a5795;
+        text-decoration: none;
+    }
