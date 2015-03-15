@@ -541,7 +541,7 @@ function loadTableSorter(){
         }
          $(elem).typeahead({
                     template:['<div class="media br-bottom">',
-                          '<div class="media-body"><h4 class="media-heading">{{value}}</h4>',
+                          '<div class="media-body"><strong class="media-heading">{{value}}</strong>',
                           '<p>{{ci}}<p></div></div>'
                                   ].join(''),
                         engine: Hogan,

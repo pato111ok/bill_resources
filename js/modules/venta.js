@@ -16,15 +16,15 @@ function open_loadprodpanel(){
         var lodaproductsopt = {
             size: { width: '99%', height: 300 }, title:    'CARGAR PRODUCTOS', overflow: 'auto',
             position:  {bottom: 0, left: 5}, controls: { iconfont: 'bootstrap' },
-            content: '<div style="margin:10px">'+content+'<br class="clr"/><div id="searchproductoutput"></div></div>'
+            content: '<div style="margin:10px">'+content+'<br class="clr"/><div id="searchproductoutput" class="col-md-12"></div></div>'
         };        
         if (jspanel_lodaproducts){
             jspanel_lodaproducts.close();
 //            alert('aqui');
-            jspanel_lodaproducts = $( '#container-fluid' ).jsPanel(lodaproductsopt);
+            jspanel_lodaproducts = $( '.row' ).jsPanel(lodaproductsopt);
         }else{
 //            alert('aca');
-            jspanel_lodaproducts = $( '#container-fluid' ).jsPanel(lodaproductsopt);  
+            jspanel_lodaproducts = $( '.row' ).jsPanel(lodaproductsopt);  
         }
 }
 
