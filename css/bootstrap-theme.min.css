@@ -9,7 +9,7 @@
 
 /* agregado para cambiar el tema */
 
- /*@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');*/
+ @import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
  .navbar-default {
         background-image: linear-gradient(to bottom, #5dae20 0px, #3a8104 100%);
 	background-color: #ff0000;

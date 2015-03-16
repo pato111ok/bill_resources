@@ -269,21 +269,21 @@ function recalcular_precios(){
 }
     
 /* refresca la lista de productos despues de insertar uno nuevo */
-    var refresh_cart_insert_prod = function (datum) {
-        var url = main_path+'cotizacion/index/insertprod/time/'+$.now();
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: { id: datum.ci, qty: 1 },       
-                success: function(html){
-                    $('#cotizacionescart').html(html);                    
-                },
-                error: function(){
-                    alertaError("Error!! No se pudo alcanzar el archivo de proceso", "Error!!");
-                }              
-            });  
-            $('#product_name_autosug').val('');
-    };
+//    var refresh_cart_insert_prod = function (datum) {
+//        var url = main_path+'cotizacion/index/insertprod/time/'+$.now();
+//            $.ajax({
+//                type: "POST",
+//                url: url,
+//                data: { id: datum.ci, qty: 1 },       
+//                success: function(html){
+//                    $('#cotizacionescart').html(html);                    
+//                },
+//                error: function(){
+//                    alertaError("Error!! No se pudo alcanzar el archivo de proceso", "Error!!");
+//                }              
+//            });  
+//            $('#product_name_autosug').val('');
+//    };
     
     var refresh_cart_load_client = function (datum) {
         var url = main_path+'cotizacion/index/findByCI/time/'+$.now();
@@ -303,9 +303,9 @@ function recalcular_precios(){
 //function venta(){
 
 $(function() {
-     $.autosugest_search('#product_name_autosug');
+//     $.autosugest_search('#product_name_autosug');
      $.autosugest_search('#client_name');
-     $.autosugest_search('#client_ci_autosuggest');
+//     $.autosugest_search('#client_ci_autosuggest');
 //     autosugest_client();
      forma_pago_required();
      recalcular_precios();

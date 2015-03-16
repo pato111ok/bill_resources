@@ -341,8 +341,11 @@ function loadFormAjax(){
         }
         if(disabled){
             $(this).attr('disabled','disabled').removeClass('btn-primary').addClass('btn-default');            
-        }        
-        $("#"+outputelem).html('<div id="msg_wait"><hr class="clr"><img src="'+main_path+'resources/img/loading83.gif" alt="Eespere.."/></div>');
+        }
+        
+        var progress_bar = '<div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"> <span class="sr-only">45% Complete</span> </div></div>';
+        
+        $("#"+outputelem).html('<div id="msg_wait"><hr class="clr"/>Procesando, espere un momento'+progress_bar+'</div>');
             var form = $(this).parents('form');
             $(form).ajaxForm(
             {

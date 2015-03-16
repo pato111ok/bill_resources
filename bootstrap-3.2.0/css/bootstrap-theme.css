@@ -444,7 +444,7 @@
 /*# sourceMappingURL=bootstrap-theme.css.map */
 
 
- /*@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');*/
+ @import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400');
  .navbar-default {
         background-image: linear-gradient(to bottom, #000 0px, #000 100%);
 	background-color: #5cb85c;
