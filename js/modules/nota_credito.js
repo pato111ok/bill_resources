@@ -50,89 +50,53 @@ function calcularFechaVencimientoFactCompra(){
     });
 }
 
-/*Cuando se selecciona que la compra es gasto*/
-function esGastoSelected(){
-   $(document).on("change", "input#pesgasto", function(e) {
-     /* alert('hola...'); */
-     if($(this).is(":checked")) {
-         $("#pesactivofijo").removeAttr("checked");
-	 	$("#gastosaccountsview").show();
-	 	$("#pcentroscostoid").show();                
-	 	$("#pcontacuentasplancodinventario").hide();
-	 	$("#pcontacuentasplancodactivofijo").hide();
-                $("#pdepartamentoid").hide();    
-	 }else{
-		$("#gastosaccountsview").hide();
-                $("#pcentroscostoid").hide();                
-		$("#pcontacuentasplancodinventario").show();
-	 }
-         return false;
-   });
-
-   $(document).on("change", "input#pesactivofijo", function(e) {
-     if($(this).is(":checked")) {
-         $("#pesgasto").removeAttr("checked");
-            $("#pcontacuentasplancodactivofijo").show();
-            $("#pdepartamentoid").show();
-            $("#gastosaccountsview").hide();
-            $("#pcontacuentasplancodinventario").hide();
-            $("#pcentroscostoid").hide();
-	 }else{
-            $("#pcontacuentasplancodinventario").show();
-            $("#pcentroscostoid").show();                
-            $("#pdepartamentoid").hide();                
-            $("#pcontacuentasplancodactivofijo").hide();
-	 }
-         return false;
-   });
-}
 /*********************************************/
-    function autosugest_product_name(){
-         $('#product_name_autosug').typeahead({
-                    template:['<div class="media br-bottom">',
-                          '<div class="media-body"><h4 class="media-heading">{{value}}</h4>',
-                          '<p>{{id}}<p></div></div>'
-                                  ].join(''),
-                        engine: Hogan,
-                        remote: main_path+'ventas/product/autosugest_by_name/%QUERY',
-                        minLength: 4,
-                        limit: 10,
-                })
-                .on('typeahead:selected', function(event, datum) {
-                    var url = main_path+'nota_credito/index/insertprod';
-                        $.ajax({
-                            type: "POST",
-                            url: url,
-                            data: { id: datum.id,qty: 1 },       
-                            success: function(html){
-                                $('#cotizacionescart').html(html);                    
-                            },
-                            error: function(){
-                                alertaError("Error!! No se pudo alcanzar el archivo de proceso", "Error!!");
-                            }              
-                        }); 
-                $('#product_name_autosug').val('');
-         });
+//    function autosugest_product_name(){
+//         $('#product_name_autosug').typeahead({
+//                    template:['<div class="media br-bottom">',
+//                          '<div class="media-body"><h4 class="media-heading">{{value}}</h4>',
+//                          '<p>{{id}}<p></div></div>'
+//                                  ].join(''),
+//                        engine: Hogan,
+//                        remote: main_path+'ventas/product/autosugest_by_name/%QUERY',
+//                        minLength: 4,
+//                        limit: 10,
+//                })
+//                .on('typeahead:selected', function(event, datum) {
+//                    var url = main_path+'nota_credito/index/insertprod';
+//                        $.ajax({
+//                            type: "POST",
+//                            url: url,
+//                            data: { id: datum.id,qty: 1 },       
+//                            success: function(html){
+//                                $('#cotizacionescart').html(html);                    
+//                            },
+//                            error: function(){
+//                                alertaError("Error!! No se pudo alcanzar el archivo de proceso", "Error!!");
+//                            }              
+//                        }); 
+//                $('#product_name_autosug').val('');
+//         });
+//
+//        $('#client_ci_autosuggest').typeahead({
+//                    template:['<div class="media br-bottom">',
+//                          '<div class="media-body"><h4 class="media-heading">{{value}}</h4>',
+//                          '<p>{{client_name}}<p></div></div>'
+//                                  ].join(''),
+//                        engine: Hogan,
+//                        remote: main_path+'cxc/client/autosugest_by_ci/%QUERY',
+//                        minLength: 4,
+//                        limit: 10,
+//        })
+//    }
 
-        $('#client_ci_autosuggest').typeahead({
-                    template:['<div class="media br-bottom">',
-                          '<div class="media-body"><h4 class="media-heading">{{value}}</h4>',
-                          '<p>{{client_name}}<p></div></div>'
-                                  ].join(''),
-                        engine: Hogan,
-                        remote: main_path+'cxc/client/autosugest_by_ci/%QUERY',
-                        minLength: 4,
-                        limit: 10,
-        })
-    }
+$(function() {
+//    autosugest_product_name();
+//    $.loadAjaxPanel('#ajaxpanelbtnproducts', { width: '99%', height: 550 }, {top: 30, left: 5});
+//    $.loadAjaxPanel('#ajaxpanelbtnproductget', { width: '99%', height: 550 }, {top: 30, left: 5});    
+//    $.loadAjaxPanel('#ajaxpanelbtnproductsload', { width: '99%', height: 550 }, {top: 30, left: 5});    
+//    $.loadAjaxPanel('#loadsearchprovbtn', { width: '99%', height: 300 }, {bottom: 0, left: 5});
 
-function nota_credito(){
-    autosugest_product_name();
-    $.loadAjaxPanel('#ajaxpanelbtnproducts', { width: '99%', height: 550 }, {top: 30, left: 5});
-    $.loadAjaxPanel('#ajaxpanelbtnproductget', { width: '99%', height: 550 }, {top: 30, left: 5});    
-    $.loadAjaxPanel('#ajaxpanelbtnproductsload', { width: '99%', height: 550 }, {top: 30, left: 5});    
-    $.loadAjaxPanel('#loadsearchprovbtn', { width: '99%', height: 300 }, {bottom: 0, left: 5});
-    esGastoSelected();
     calcularFechaVencimientoFactCompra();
     recdescporcent("#recporcent",'#recval');
     recdescporcent("#desdporcent",'#descval');
@@ -140,6 +104,6 @@ function nota_credito(){
     recdescval('#recval',"#recporcent");
     recdescval('#descval',"#desdporcent");
     
-    $.loadAjaxPanel('#loadproductsviewbtn',{ width: '99%', height: 300 },{bottom: 0, left: 5});
+//    $.loadAjaxPanel('#loadproductsviewbtn',{ width: '99%', height: 300 },{bottom: 0, left: 5});
 //    $.loadAjaxPanel('#ajaxpanelbtn',{ width: '99%', height: 300 },{bottom: 0, left: 5});
-}
+});

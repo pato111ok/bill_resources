@@ -31,10 +31,10 @@ function open_loadprodpanel(){
         if (jspanel_lodaproducts){
             jspanel_lodaproducts.close();
 //            alert('aqui');
-            jspanel_lodaproducts = $( '#container-fluid' ).jsPanel(lodaproductsopt);
+            jspanel_lodaproducts = $( '#cotizacionescart' ).jsPanel(lodaproductsopt);
         }else{
 //            alert('aca');
-            jspanel_lodaproducts = $( '#container-fluid' ).jsPanel(lodaproductsopt);  
+            jspanel_lodaproducts = $( '#cotizacionescart' ).jsPanel(lodaproductsopt);  
         }
 }
 
