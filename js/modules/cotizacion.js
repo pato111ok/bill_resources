@@ -285,26 +285,26 @@ function recalcular_precios(){
 //            $('#product_name_autosug').val('');
 //    };
     
-    var refresh_cart_load_client = function (datum) {
-        var url = main_path+'cotizacion/index/findByCI/time/'+$.now();
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: { ci: datum.ci,id: datum.id },       
-                success: function(html){
-                    $('#cotizacionescart').html(html);                    
-                },
-                error: function(){
-                    alertaError("Error!! No se pudo alcanzar el archivo de proceso", "Error!!");
-                }              
-            });
-    };
+//    var refresh_cart_load_client = function (datum) {
+//        var url = main_path+'cotizacion/index/findByCI/time/'+$.now();
+//            $.ajax({
+//                type: "POST",
+//                url: url,
+//                data: { ci: datum.ci,id: datum.id },       
+//                success: function(html){
+//                    $('#cotizacionescart').html(html);                    
+//                },
+//                error: function(){
+//                    alertaError("Error!! No se pudo alcanzar el archivo de proceso", "Error!!");
+//                }              
+//            });
+//    };
 
 //function venta(){
 
 $(function() {
 //     $.autosugest_search('#product_name_autosug');
-     $.autosugest_search('#client_name');
+//     $.autosugest_search('#client_name');
 //     $.autosugest_search('#client_ci_autosuggest');
 //     autosugest_client();
      forma_pago_required();
