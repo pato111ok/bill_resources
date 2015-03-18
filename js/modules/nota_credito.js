@@ -104,6 +104,6 @@ $(function() {
     recdescval('#recval',"#recporcent");
     recdescval('#descval',"#desdporcent");
     
-//    $.loadAjaxPanel('#loadproductsviewbtn',{ width: '99%', height: 300 },{bottom: 0, left: 5});
+    $.loadAjaxPanel('#loadproductsviewbtn',{ width: '99%', height: 300 },{bottom: 0, left: 5});
 //    $.loadAjaxPanel('#ajaxpanelbtn',{ width: '99%', height: 300 },{bottom: 0, left: 5});
 });
