@@ -76,3 +76,8 @@ function restar_de_efectivo(){
     }
     $('#cxp_efectivo_val').val(new_efectivo_val.toFixed(numdecimales));
 }
+
+$(function() {
+    forma_pago_required();
+    restar_de_efectivo();
+});
