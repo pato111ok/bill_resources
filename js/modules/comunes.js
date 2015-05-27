@@ -340,7 +340,11 @@ function loadFormAjax(){
             disabled = false;
         }
         if(disabled){
-            $(this).attr('disabled','disabled').removeClass('btn-primary').addClass('btn-default');            
+            /*
+             *REVISAR SI AFECTA SU FUNCIONAMIENTO DJ
+             *en la siguiente linea commentada 
+             */
+//            $(this).attr('disabled','disabled').removeClass('btn-primary').addClass('btn-default');            
         }
         
         var progress_bar = '<div class="progress"> <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%"> <span class="sr-only">45% Complete</span> </div></div>';
