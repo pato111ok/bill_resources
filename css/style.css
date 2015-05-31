@@ -228,7 +228,7 @@ p {
     font-size: 58px;
 }
 iframe{
-    display: none;
+    display: inline;  
 }
 
 .form-control2{
